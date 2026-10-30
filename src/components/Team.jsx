@@ -45,13 +45,6 @@ export default function Team() {
                     ))}
                   </ul>
                 </div>
-                {m.contributions && (
-                  <ul className="member__contrib">
-                    {m.contributions.map((c) => (
-                      <li key={c}>{c}</li>
-                    ))}
-                  </ul>
-                )}
                 <a href={`https://github.com/${m.github}`} target="_blank" rel="noreferrer">
                   <GitHubIcon /> {m.github}
                   <span className="visually-hidden"> no GitHub (abre em nova aba)</span>
