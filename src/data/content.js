@@ -250,9 +250,20 @@ export const MODULES = [
   },
 ]
 
+// Fotos: o site procura primeiro em src/assets/images/<github>.(jpg|jpeg|png|webp|avif)
+// (ou no arquivo indicado em `photo`); se não achar, usa a foto de perfil do GitHub.
 export const TEAM = [
-  { name: 'João Guilherme da Silva', role: 'Full-Stack IoT', github: 'GhostDev-Creator' },
-  { name: 'Emily Cesar Moreira', role: 'Front-End Mobile', github: 'EmilyMoreira02' },
-  { name: 'Hudson Henrique Silva Bento', role: 'Front-End Mobile', github: 'hudson1902' },
-  { name: 'Amanda Savoy Nunes', role: 'Front-End', github: 'Amandasavoy' },
+  { name: 'João Guilherme da Silva', roles: ['Full-Stack', 'IoT'], github: 'GhostDev-Creator' },
+  {
+    name: 'Emily Cesar Moreira',
+    roles: ['Front-End', 'Mobile', 'Maquete física'],
+    github: 'EmilyMoreira02',
+    contributions: [
+      'Confecção e acabamento estético da maquete física usada na apresentação.',
+      'Pintura detalhada, colagem e aplicação de elementos decorativos e texturas.',
+      'Integração do hardware IoT ao modelo, posicionando sensores e fitas de LED para simular os cenários.',
+    ],
+  },
+  { name: 'Hudson Henrique Silva Bento', roles: ['Front-End', 'Mobile'], github: 'hudson1902' },
+  { name: 'Amanda Savoy Nunes', roles: ['Front-End'], github: 'Amandasavoy' },
 ]

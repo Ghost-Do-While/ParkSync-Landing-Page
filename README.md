@@ -24,6 +24,7 @@ src/
   App.jsx                 monta as seções na ordem da página
   styles.css              tokens de cor, grade blueprint e estilos de todas as seções
   data/content.js         TODOS os textos (edite aqui para mudar conteúdo)
+  assets/images/          fotos da equipe (<usuario-github>.jpg); veja o LEIA-ME da pasta
   lib/gsap.js             registro dos plugins (ScrollTrigger, MotionPath)
   lib/useAnimation.js     hook que só anima quando prefers-reduced-motion permite
   components/
@@ -35,7 +36,7 @@ src/
     Parking.jsx           planta do pátio com leitura de placa animada
     Stack.jsx             stack como chips (CI) na placa
     Modules.jsx           os seis módulos do sistema
-    Team.jsx              autoria
+    Team.jsx + Avatar.jsx autoria; foto local -> foto do GitHub -> iniciais
     Footer.jsx            carimbo técnico, licença e link do repositório
 ```
 

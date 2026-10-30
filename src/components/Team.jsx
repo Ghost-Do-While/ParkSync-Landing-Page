@@ -4,11 +4,7 @@ import { useAnimation, revealChildren } from '../lib/useAnimation'
 import { TEAM } from '../data/content'
 import { GitHubIcon } from './Icons'
 import SectionHead from './SectionHead'
-
-const initials = (name) => {
-  const parts = name.split(' ')
-  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase()
-}
+import Avatar from './Avatar'
 
 export default function Team() {
   const ref = useRef(null)
@@ -40,11 +36,22 @@ export default function Team() {
           {TEAM.map((m) => (
             <li key={m.github}>
               <article className="member panel crop">
-                <span className="member__badge" aria-hidden="true">{initials(m.name)}</span>
+                <Avatar member={m} />
                 <div>
                   <h3>{m.name}</h3>
-                  <span className="member__role">{m.role}</span>
+                  <ul className="member__roles" aria-label="Funções">
+                    {m.roles.map((r) => (
+                      <li key={r}>{r}</li>
+                    ))}
+                  </ul>
                 </div>
+                {m.contributions && (
+                  <ul className="member__contrib">
+                    {m.contributions.map((c) => (
+                      <li key={c}>{c}</li>
+                    ))}
+                  </ul>
+                )}
                 <a href={`https://github.com/${m.github}`} target="_blank" rel="noreferrer">
                   <GitHubIcon /> {m.github}
                   <span className="visually-hidden"> no GitHub (abre em nova aba)</span>
