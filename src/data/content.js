@@ -1,7 +1,7 @@
 // Textos da landing page, baseados no README do projeto.
 // Afirmações numéricas foram reescritas para descrever o que o sistema faz hoje.
 
-export const REPO_URL = 'https://github.com/GhostDev-Creator/ParkSync'
+export const REPO_URL = 'https://github.com/EmilyMoreira02/ParkSync'
 
 export const NAV = [
   { id: 'visao', label: 'Visão' },
